@@ -8,13 +8,8 @@
 #pragma mark - UIApplicationDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // ****************************************************************************
-    // Uncomment and fill in with your Parse credentials:
-    // [Parse setApplicationId:@"your_application_id" clientKey:@"your_client_key"];
-    //
-    // If you are using Facebook, uncomment and fill in with your Facebook App Id:
-    // [PFFacebookUtils initializeWithApplicationId:@"your_facebook_app_id"];
-    // ****************************************************************************
+    [Parse setApplicationId:@"n0mKt58kluNIYcZEHDRPKVuda6pHqSHcl3Z0nJ5l"
+                  clientKey:@"sBKOR13bxRBguQXqOfZ1mTWNir5GVTKCBIAE8DUV"];
 
     [PFUser enableAutomaticUser];
     
@@ -36,18 +31,6 @@
     return YES;
 }
 
-/*
- 
-///////////////////////////////////////////////////////////
-// Uncomment this method if you are using Facebook
-///////////////////////////////////////////////////////////
- 
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
-    sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    return [PFFacebookUtils handleOpenURL:url];
-} 
- 
-*/
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken {
     [PFPush storeDeviceToken:newDeviceToken];
